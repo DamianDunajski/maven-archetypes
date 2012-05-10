@@ -8,11 +8,61 @@
 	<version>${version}</version>
 	<packaging>war</packaging>
 
+	<properties>
+		<!-- platform -->
+		<javaee.version>6.0</javaee.version>
+		<!-- libraries -->
+		<commons-lang.version>3.1</commons-lang.version>
+		<guava.version>11.0.2</guava.version>
+		<joda-time.version>2.1</joda-time.version>
+		<slf4j.version>1.6.4</slf4j.version>
+		<!-- test libraries -->
+		<junit.version>4.10</junit.version>
+		<mockito.version>1.9.0</mockito.version>
+	</properties>
+
 	<dependencies>
 		<dependency>
-      			<groupId>junit</groupId>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>${javaee.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>${joda-time.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.10</version>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>${mockito.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
